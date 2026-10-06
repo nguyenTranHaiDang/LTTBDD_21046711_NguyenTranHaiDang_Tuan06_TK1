@@ -10,10 +10,19 @@ import {
 
 import Screen01 from './screens/Screen01';
 import Screen02 from './screens/Screen02';
+import Screen03 from './screens/Screen03';
 
 export type RootStackParamList = {
   Screen01: undefined;
   Screen02: undefined;
+  Screen03: {
+    bike: {
+      id: string;
+      name: string;
+      price: number;
+      image: any;
+    };
+  };
 };
 
 const Stack =
@@ -36,6 +45,11 @@ export default function App() {
         <Stack.Screen
           name="Screen02"
           component={Screen02}
+        />
+
+        <Stack.Screen
+          name="Screen03"
+          component={Screen03}
         />
       </Stack.Navigator>
     </NavigationContainer>
